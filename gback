@@ -1,0 +1,6 @@
+#!/bin/bash
+git reset --soft HEAD~
+read -p "reset remote(y/n): " y
+if [[ "$y" == "y" ]]; then
+	git push -f origin main
+fi

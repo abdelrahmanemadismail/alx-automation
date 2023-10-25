@@ -1,0 +1,9 @@
+#!/bin/bash
+pycodestyle $1
+./$1
+read -p "upload(y/n): " y
+if [[ "$y" == "y" ]]; then
+	git add .
+	git commit -m "Create $1"
+	git push
+fi
